@@ -1,0 +1,324 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Newsreader;
+    font-size: 3rem;
+    letter-spacing: -1.28px;
+}
+
+h2 {
+    padding-top: 2rem;
+    color: #000;
+    text-align: center;
+    font-family: Newsreader;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+h3 {
+    color: #000;
+    font-family: Unna;
+    font-size: 3rem;
+}
+
+main {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .portada {
+        width: $anchoPORT;
+        height: $altoPORT;
+        border-radius: $borderRad;
+    }
+
+    .section-presentacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .descripcion {
+            width: 15rem;
+
+            span {
+                display: block;
+                color: #000000c0;
+                text-align: center;
+                font-family: Antic Didone;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+.main-abtme {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "titulo-abtme"
+        "container-abtme"
+        "titulo-education"
+        "container-education"
+        "titulo-s_skills"
+        "parrafo-s_skills";
+
+    .titulo-abtme {
+        grid-area: titulo-abtme;
+    }
+
+    .container-abtme {
+        grid-area: container-abtme;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 7rem;
+        padding-top: 3%;
+        flex-wrap: wrap;
+
+        img {
+            width: 14rem;
+            height: 22rem;
+            border-radius: 50px;
+        }
+    }
+
+    .titulo-education {
+        grid-area: titulo-education;
+    }
+
+    .container-education {
+        grid-area: container-education;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .column-edc {
+            padding-top: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+
+            ul {
+                list-style: none;
+
+                li {
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+
+                    .card {
+                        width: 23rem;
+                        height: 12rem;
+
+                        .card a img {
+                            height: 4.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .titulo-s_skills {
+        grid-area: titulo-s_skills;
+    }
+
+    .parrafo-s_skills {
+        grid-area: parrafo-s_skills;
+        width: 100%;
+
+        #parrafo-s_skills {
+            color: #000000d7;
+            text-align: justify;
+            font-family: NanumMyeongjo;
+            font-size: 20px;
+            letter-spacing: -0.6px;
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-top: 3%;
+            padding-bottom: 5%;
+        }
+    }
+}
+
+.main-my_prjc {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "titulo-prjc"
+        "container-video"
+        "title-film"
+        "container-film"
+        "title-theatre"
+        "container-theatre"
+        "container-film_footer";
+
+    .titulo-my_prjc {
+        grid-area: titulo-prjc;
+    }
+
+    .container-video {
+        grid-area: container-video;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10%;
+        padding-top: 3%;
+
+        img {
+            width: 31.2rem;
+            height: 21.8rem;
+        }
+    }
+
+    .film-title {
+        grid-area: title-film;
+    }
+
+    .container-film {
+        grid-area: container-film;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .columna-film {
+            padding-left: 10%;
+            padding-right: 10%;
+
+            ul {
+                list-style: none;
+            }
+        }
+    }
+
+    .theatre-title {
+        grid-area: title-theatre;
+    }
+
+    .container-theatre {
+        grid-area: container-theatre;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .columna-theatre {
+            padding-left: 10%;
+            padding-right: 10%;
+
+            ul {
+                list-style: none;
+
+                li {
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+                }
+
+                #li-theatre {
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+
+    .container-film_footer {
+        grid-area: container-film_footer;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 2rem;
+
+        div {
+            padding-top: 3%;
+            padding-left: 10%;
+            padding-right: 10%;
+
+            img {
+                width: 20rem;
+                height: 12rem;
+            }
+        }
+    }
+}
+
+.container-ctc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20%;
+
+    .columna-ctc {
+        padding-top: 3%;
+        padding-left: 20%;
+
+        .img-ctcme1 {
+            width: $anchoIMG;
+            height: $altoIMG;
+            border-radius: 35px;
+            margin-left: -2.5rem;
+            margin-top: -4rem;
+            position: relative;
+        }
+
+        .img-ctcme2 {
+            width: $anchoIMG;
+            height: $altoIMG;
+            border-radius: 35px;
+            margin-top: -8.3rem;
+            margin-left: 6rem;
+            position: relative;
+        }
+
+        .img-ctcme3 {
+            width: $anchoIMG;
+            height: $altoIMG;
+            border-radius: 35px;
+            margin-top: -7rem;
+            margin-left: -3.1rem;
+            position: relative;
+        }
+    }
+
+    .columna-text {
+        padding-top: 3%;
+        padding-right: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .text-ctc {
+            text-align: end;
+
+            span {
+                display: block;
+                color: #000000bb;
+            }
+
+            i {
+                color: #000;
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+}

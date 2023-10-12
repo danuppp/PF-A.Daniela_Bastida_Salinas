@@ -1,0 +1,26 @@
+header {
+    background: rgb(240, 240, 240);
+    width: 100%;
+    height: 5rem;
+
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+
+        .container-titulo {
+            padding-top: 1.8rem;
+            padding-left: 4.3rem;
+
+            .titulo_nav {
+                color: #000;
+                font-family: Unna;
+                font-size: 2rem;
+            }
+        }
+
+        #navbarNavAltMarkup {
+            justify-content: end;
+        }
+    }
+}
