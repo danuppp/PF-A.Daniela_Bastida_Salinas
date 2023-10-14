@@ -190,8 +190,8 @@ main .section-presentacion .descripcion span {
   padding-bottom: 3%;
 }
 .main-my_prjc .container-theatre .columna-theatre ul #li-theatre {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
 }
 .main-my_prjc .container-film_footer {
   grid-area: container-film_footer;
@@ -271,7 +271,6 @@ main .section-presentacion .descripcion span {
 header {
   background: rgb(240, 240, 240);
   width: 100%;
-  height: 5rem;
 }
 header nav {
   position: fixed;
@@ -300,6 +299,164 @@ footer i {
   font-size: 2rem;
   color: black;
   text-align: center;
+}
+
+@media (max-width: 799px) {
+  h1 {
+    text-align: center;
+    font-family: Newsreader;
+    font-size: 2.3rem;
+    letter-spacing: -1.28px;
+  }
+  h2 {
+    padding-top: 1.8rem;
+    color: #000;
+    text-align: center;
+    font-family: Newsreader;
+    font-size: 2rem;
+    font-style: italic;
+  }
+  h3 {
+    color: #000;
+    font-family: Unna;
+    font-size: 2.3rem;
+  }
+  nav .container-titulo {
+    padding-top: 1.5rem;
+    padding-left: 4rem;
+  }
+  main {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  main .portada {
+    width: 19.6rem;
+    height: 29.93REM;
+  }
+  .main-abtme .container-abtme {
+    grid-area: container-abtme;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2%;
+    flex-wrap: wrap;
+  }
+  .main-abtme .container-abtme img {
+    width: 14rem;
+    height: 22rem;
+    border-radius: 50px;
+  }
+  .main-abtme .container-education .column-edc {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+  .main-abtme .container-education .column-edc ul {
+    list-style: none;
+  }
+  .main-abtme .container-education .column-edc ul li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .main-abtme .container-education .column-edc ul li .card {
+    width: 22rem;
+    height: 13rem;
+  }
+  .main-abtme .container-education .column-edc ul li .card .card a img {
+    height: 3rem;
+  }
+  .main-abtme .parrafo-s_skills #parrafo-s_skills {
+    color: rgba(0, 0, 0, 0.662745098);
+    text-align: justify;
+    font-family: NanumMyeongjo;
+    font-size: 1.2rem;
+  }
+  .main-my_prjc .container-video {
+    gap: 5%;
+  }
+  .main-my_prjc .container-video img {
+    width: 28rem;
+    height: 18rem;
+  }
+  .main-my_prjc .container-film {
+    flex-wrap: nowrap;
+  }
+  .main-my_prjc .container-film .columna-film {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .main-my_prjc .container-film .columna-film ul {
+    list-style: none;
+  }
+  .main-my_prjc .container-film .columna-film ul li {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  .main-my_prjc .container-film .columna-film ul #li-film {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .main-my_prjc .container-theatre {
+    flex-wrap: nowrap;
+  }
+  .main-my_prjc .container-theatre .columna-theatre {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .main-my_prjc .container-theatre .columna-theatre ul {
+    list-style: none;
+  }
+  .main-my_prjc .container-theatre .columna-theatre ul li {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  .main-my_prjc .container-theatre .columna-theatre ul #li-theatre {
+    padding-top: 1.8rem;
+    padding-bottom: 2.2rem;
+  }
+  .container-film_footer div img {
+    padding-top: 2rem;
+    width: 20rem;
+    height: 12rem;
+  }
+  .container-ctc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20%;
+  }
+  .container-ctc .columna-ctc .img-ctcme1 {
+    margin-left: -2.5rem;
+    margin-top: -4rem;
+    position: relative;
+  }
+  .container-ctc .columna-ctc .img-ctcme2 {
+    margin-top: -8.3rem;
+    margin-left: 6rem;
+    position: relative;
+  }
+  .container-ctc .columna-ctc .img-ctcme3 {
+    margin-top: -7rem;
+    margin-left: -3.1rem;
+    position: relative;
+  }
+  .container-ctc .columna-text {
+    padding-top: 3%;
+    padding-right: 1rem;
+    padding-bottom: 5rem;
+  }
+  .container-ctc .columna-text .text-ctc {
+    text-align: center;
+  }
+  .container-ctc .columna-text .text-ctc i {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
