@@ -37,13 +37,16 @@ main {
         width: $anchoPORT;
         height: $altoPORT;
         border-radius: $borderRad;
+        transition: 1s;
+
+        &:hover{
+            transform: scale(1.03);
+            filter: none;
+        }
     }
 
     .section-presentacion {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-column-center;
 
         .descripcion {
             width: 15rem;
@@ -76,9 +79,7 @@ main {
 
     .container-abtme {
         grid-area: container-abtme;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include flex-row-center;
         gap: 7rem;
         padding-top: 3%;
         flex-wrap: wrap;
@@ -87,6 +88,11 @@ main {
             width: 14rem;
             height: 22rem;
             border-radius: 50px;
+            transition: 1s;
+
+            &:hover{
+                @include transition-scale;
+            }
         }
     }
 
@@ -97,10 +103,7 @@ main {
     .container-education {
         grid-area: container-education;
         padding-top: 2rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex-row-center;
         flex-wrap: wrap;
 
         .column-edc {
@@ -117,10 +120,15 @@ main {
 
                     .card {
                         width: 23rem;
-                        height: 12rem;
+                        height: 13rem;
+                        transition: 1s;
 
                         .card a img {
-                            height: 4.5rem;
+                            height: 4rem;
+                        }
+
+                        &:hover{
+                            @include transition-scale;
                         }
                     }
                 }
@@ -169,15 +177,13 @@ main {
 
     .container-video {
         grid-area: container-video;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include flex-row-center;
         gap: 10%;
         padding-top: 3%;
 
         img {
             width: 31.2rem;
-            height: 21.8rem;
+            height: 18rem;
         }
     }
 
@@ -187,15 +193,11 @@ main {
 
     .container-film {
         grid-area: container-film;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex-row-center;
         flex-wrap: wrap;
 
         .columna-film {
-            padding-left: 10%;
-            padding-right: 10%;
+            @include padding-lados;
 
             ul {
                 list-style: none;
@@ -210,15 +212,11 @@ main {
     .container-theatre {
         grid-area: container-theatre;
         padding-top: 2rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex-row-center;
         flex-wrap: wrap;
 
         .columna-theatre {
-            padding-left: 10%;
-            padding-right: 10%;
+            @include padding-lados;
 
             ul {
                 list-style: none;
@@ -239,10 +237,7 @@ main {
     .container-film_footer {
         grid-area: container-film_footer;
         padding-top: 2rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex-row-center;
         flex-wrap: wrap;
         padding-bottom: 2rem;
 
@@ -271,27 +266,21 @@ main {
         padding-left: 20%;
 
         .img-ctcme1 {
-            width: $anchoIMG;
-            height: $altoIMG;
-            border-radius: 35px;
+            @include size-img-ctc;
             margin-left: -2.5rem;
-            margin-top: -4rem;
+            margin-top: -3rem;
             position: relative;
         }
 
         .img-ctcme2 {
-            width: $anchoIMG;
-            height: $altoIMG;
-            border-radius: 35px;
+            @include size-img-ctc;
             margin-top: -8.3rem;
             margin-left: 6rem;
             position: relative;
         }
 
         .img-ctcme3 {
-            width: $anchoIMG;
-            height: $altoIMG;
-            border-radius: 35px;
+            @include size-img-ctc;
             margin-top: -7rem;
             margin-left: -3.1rem;
             position: relative;
@@ -301,10 +290,7 @@ main {
     .columna-text {
         padding-top: 3%;
         padding-right: 15%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-column-center;
 
         .text-ctc {
             text-align: end;

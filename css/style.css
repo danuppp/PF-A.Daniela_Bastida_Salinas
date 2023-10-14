@@ -37,6 +37,11 @@ main .portada {
   width: 19.6rem;
   height: 29.93REM;
   border-radius: 50px;
+  transition: 1s;
+}
+main .portada:hover {
+  transform: scale(1.03);
+  filter: none;
 }
 main .section-presentacion {
   display: flex;
@@ -68,6 +73,7 @@ main .section-presentacion .descripcion span {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 7rem;
   padding-top: 3%;
   flex-wrap: wrap;
@@ -76,6 +82,11 @@ main .section-presentacion .descripcion span {
   width: 14rem;
   height: 22rem;
   border-radius: 50px;
+  transition: 1s;
+}
+.main-abtme .container-abtme img:hover {
+  transform: scale(1.03);
+  filter: none;
 }
 .main-abtme .titulo-education {
   grid-area: titulo-education;
@@ -103,10 +114,15 @@ main .section-presentacion .descripcion span {
 }
 .main-abtme .container-education .column-edc ul li .card {
   width: 23rem;
-  height: 12rem;
+  height: 13rem;
+  transition: 1s;
 }
 .main-abtme .container-education .column-edc ul li .card .card a img {
-  height: 4.5rem;
+  height: 4rem;
+}
+.main-abtme .container-education .column-edc ul li .card:hover {
+  transform: scale(1.03);
+  filter: none;
 }
 .main-abtme .titulo-s_skills {
   grid-area: titulo-s_skills;
@@ -141,12 +157,13 @@ main .section-presentacion .descripcion span {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 10%;
   padding-top: 3%;
 }
 .main-my_prjc .container-video img {
   width: 31.2rem;
-  height: 21.8rem;
+  height: 18rem;
 }
 .main-my_prjc .film-title {
   grid-area: title-film;
@@ -160,8 +177,8 @@ main .section-presentacion .descripcion span {
   flex-wrap: wrap;
 }
 .main-my_prjc .container-film .columna-film {
-  padding-left: 10%;
   padding-right: 10%;
+  padding-left: 10%;
 }
 .main-my_prjc .container-film .columna-film ul {
   list-style: none;
@@ -179,8 +196,8 @@ main .section-presentacion .descripcion span {
   flex-wrap: wrap;
 }
 .main-my_prjc .container-theatre .columna-theatre {
-  padding-left: 10%;
   padding-right: 10%;
+  padding-left: 10%;
 }
 .main-my_prjc .container-theatre .columna-theatre ul {
   list-style: none;
@@ -229,7 +246,7 @@ main .section-presentacion .descripcion span {
   height: 17rem;
   border-radius: 35px;
   margin-left: -2.5rem;
-  margin-top: -4rem;
+  margin-top: -3rem;
   position: relative;
 }
 .container-ctc .columna-ctc .img-ctcme2 {
@@ -338,7 +355,6 @@ footer i {
     height: 29.93REM;
   }
   .main-abtme .container-abtme {
-    grid-area: container-abtme;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -346,25 +362,16 @@ footer i {
     padding-top: 2%;
     flex-wrap: wrap;
   }
-  .main-abtme .container-abtme img {
-    width: 14rem;
-    height: 22rem;
-    border-radius: 50px;
-  }
   .main-abtme .container-education .column-edc {
     padding-top: 0;
     padding-left: 0;
     padding-right: 2rem;
-  }
-  .main-abtme .container-education .column-edc ul {
-    list-style: none;
   }
   .main-abtme .container-education .column-edc ul li {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
   .main-abtme .container-education .column-edc ul li .card {
-    width: 22rem;
     height: 13rem;
   }
   .main-abtme .container-education .column-edc ul li .card .card a img {
@@ -429,15 +436,16 @@ footer i {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20%;
   }
   .container-ctc .columna-ctc .img-ctcme1 {
     margin-left: -2.5rem;
-    margin-top: -4rem;
+    margin-top: -2rem;
     position: relative;
   }
   .container-ctc .columna-ctc .img-ctcme2 {
-    margin-top: -8.3rem;
+    margin-top: -6.3rem;
     margin-left: 6rem;
     position: relative;
   }
