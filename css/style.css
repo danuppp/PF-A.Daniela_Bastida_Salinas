@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  background-color: rgb(250, 250, 250);
 }
 
 h1 {
@@ -32,6 +33,7 @@ main {
   justify-content: space-around;
   width: 100%;
   flex-wrap: wrap;
+  padding-bottom: 40px;
 }
 main .portada {
   width: 19.6rem;
@@ -64,6 +66,7 @@ main .section-presentacion .descripcion span {
   display: grid;
   gap: 10px;
   grid-template-areas: "titulo-abtme" "container-abtme" "titulo-education" "container-education" "titulo-s_skills" "parrafo-s_skills";
+  padding-bottom: 40px;
 }
 .main-abtme .titulo-abtme {
   grid-area: titulo-abtme;
@@ -148,6 +151,7 @@ main .section-presentacion .descripcion span {
   gap: 10px;
   grid-template-columns: 1fr;
   grid-template-areas: "titulo-prjc" "container-video" "title-film" "container-film" "title-theatre" "container-theatre" "container-film_footer";
+  padding-bottom: 40px;
 }
 .main-my_prjc .titulo-my_prjc {
   grid-area: titulo-prjc;
@@ -160,10 +164,6 @@ main .section-presentacion .descripcion span {
   align-items: center;
   gap: 10%;
   padding-top: 3%;
-}
-.main-my_prjc .container-video img {
-  width: 31.2rem;
-  height: 18rem;
 }
 .main-my_prjc .film-title {
   grid-area: title-film;
@@ -222,12 +222,74 @@ main .section-presentacion .descripcion span {
 }
 .main-my_prjc .container-film_footer div {
   padding-top: 3%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-.main-my_prjc .container-film_footer div img {
-  width: 20rem;
-  height: 12rem;
+
+.main-gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+  grid-template-areas: "titulo-gll" "container1" "container2" "container3";
+  padding-bottom: 40px;
+}
+.main-gallery .titulo-gll {
+  grid-area: titulo-gll;
+}
+.main-gallery img {
+  transition: 1s;
+}
+.main-gallery img:hover {
+  transform: scale(1.03);
+  filter: none;
+}
+.main-gallery .container1-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 3rem;
+  grid-area: container1;
+}
+.main-gallery .container1-gallery img {
+  width: 16rem;
+  height: 22rem;
+  object-fit: cover;
+}
+.main-gallery .containder2-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 3rem;
+  grid-area: container2;
+}
+.main-gallery .containder2-gallery iframe {
+  width: 37rem;
+  height: 22rem;
+  object-fit: cover;
+}
+.main-gallery .container3-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 3rem;
+  grid-area: container3;
+}
+.main-gallery .container3-gallery img {
+  width: 16rem;
+  height: 22rem;
+  object-fit: cover;
+}
+.main-gallery .container3-gallery iframe {
+  width: 37rem;
+  height: 22rem;
+  object-fit: cover;
 }
 
 .container-ctc {
@@ -236,6 +298,7 @@ main .section-presentacion .descripcion span {
   flex-direction: row;
   justify-content: space-around;
   gap: 20%;
+  padding-bottom: 10px;
 }
 .container-ctc .columna-ctc {
   padding-top: 3%;
@@ -307,17 +370,6 @@ header nav #navbarNavAltMarkup {
   justify-content: end;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
-footer i {
-  font-size: 2rem;
-  color: black;
-  text-align: center;
-}
-
 @media (max-width: 799px) {
   h1 {
     text-align: center;
@@ -349,6 +401,7 @@ footer i {
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
+    gap: 40px;
   }
   main .portada {
     width: 19.6rem;
@@ -373,6 +426,7 @@ footer i {
   }
   .main-abtme .container-education .column-edc ul li .card {
     height: 13rem;
+    width: 20rem;
   }
   .main-abtme .container-education .column-edc ul li .card .card a img {
     height: 3rem;
@@ -386,9 +440,9 @@ footer i {
   .main-my_prjc .container-video {
     gap: 5%;
   }
-  .main-my_prjc .container-video img {
-    width: 28rem;
-    height: 18rem;
+  .main-my_prjc .container-video iframe {
+    width: 25rem;
+    height: 14rem;
   }
   .main-my_prjc .container-film {
     flex-wrap: nowrap;
@@ -426,10 +480,10 @@ footer i {
     padding-top: 1.8rem;
     padding-bottom: 2.2rem;
   }
-  .container-film_footer div img {
+  .container-film_footer div iframe {
     padding-top: 2rem;
-    width: 20rem;
-    height: 12rem;
+    width: 25rem;
+    height: 14rem;
   }
   .container-ctc {
     width: 100%;
@@ -455,7 +509,7 @@ footer i {
     position: relative;
   }
   .container-ctc .columna-text {
-    padding-top: 3%;
+    padding-top: 10%;
     padding-right: 1rem;
     padding-bottom: 5rem;
   }
@@ -464,6 +518,60 @@ footer i {
   }
   .container-ctc .columna-text .text-ctc i {
     font-size: 2rem;
+  }
+  .main-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .main-gallery .container1-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 3rem;
+  }
+  .main-gallery .container1-gallery img {
+    width: 20rem;
+    height: 22rem;
+    object-fit: cover;
+  }
+  .main-gallery .containder2-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 3rem;
+  }
+  .main-gallery .containder2-gallery iframe {
+    width: 20rem;
+    height: 22rem;
+    object-fit: cover;
+    height: 13rem;
+  }
+  .main-gallery .container3-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 3rem;
+  }
+  .main-gallery .container3-gallery img {
+    width: 20rem;
+    height: 22rem;
+    object-fit: cover;
+  }
+  .main-gallery .container3-gallery iframe {
+    width: 20rem;
+    height: 22rem;
+    object-fit: cover;
+    height: 13rem;
   }
 }
 

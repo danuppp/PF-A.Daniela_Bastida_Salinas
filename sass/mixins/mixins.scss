@@ -27,3 +27,24 @@
     transform: scale(1.03);
     filter: none;
 }
+
+@mixin container-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 3rem;
+}
+
+@mixin size-contentGallery {
+    width: 37rem;
+    height: 22rem;
+    object-fit: cover;
+}
+
+@mixin size-media-gallery {
+    width: 20rem;
+    height: 22rem;
+    object-fit: cover;
+}

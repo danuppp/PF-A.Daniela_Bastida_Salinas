@@ -36,6 +36,7 @@
         justify-content: space-around;
         width: 100%;
         flex-wrap: wrap;
+        gap: 40px;
 
         .portada {
             width: $anchoPORT;
@@ -66,6 +67,7 @@
 
                         .card {
                             height: 13rem;
+                            width: 20rem;
 
                             .card a img {
                                 height: 3rem;
@@ -91,9 +93,9 @@
         .container-video {
             gap: 5%;
 
-            img {
-                width: 28rem;
-                height: 18rem;
+            iframe {
+                width: 25rem;
+                height: 14rem;
             }
         }
 
@@ -146,10 +148,10 @@
 
     .container-film_footer {
         div {
-            img {
+            iframe {
                 padding-top: 2rem;
-                width: 20rem;
-                height: 12rem;
+                width: 25rem;
+                height: 14rem;
             }
         }
     }
@@ -180,7 +182,7 @@
         }
 
         .columna-text {
-            padding-top: 3%;
+            padding-top: 10%;
             padding-right: 1rem;
             padding-bottom: 5rem;
 
@@ -194,4 +196,41 @@
 
         }
     }
+
+    .main-gallery {
+        @include flex-column-center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .container1-gallery {
+            @include container-gallery;
+
+            img {
+                @include size-media-gallery;
+            }
+        }
+
+        .containder2-gallery {
+            @include container-gallery;
+
+            iframe {
+                @include size-media-gallery;
+                height: 13rem;
+            }
+        }
+
+        .container3-gallery {
+            @include container-gallery;
+
+            img {
+                @include size-media-gallery;
+            }
+
+            iframe {
+                @include size-media-gallery;
+                height: 13rem;
+            }
+        }
+    }
+
 }

@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    background-color: rgb(250, 250, 250);
 }
 
 h1 {
@@ -32,6 +33,7 @@ main {
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
+    padding-bottom: 40px;
 
     .portada {
         width: $anchoPORT;
@@ -39,7 +41,7 @@ main {
         border-radius: $borderRad;
         transition: 1s;
 
-        &:hover{
+        &:hover {
             transform: scale(1.03);
             filter: none;
         }
@@ -72,6 +74,7 @@ main {
         "container-education"
         "titulo-s_skills"
         "parrafo-s_skills";
+    padding-bottom: 40px;
 
     .titulo-abtme {
         grid-area: titulo-abtme;
@@ -90,7 +93,7 @@ main {
             border-radius: 50px;
             transition: 1s;
 
-            &:hover{
+            &:hover {
                 @include transition-scale;
             }
         }
@@ -127,7 +130,7 @@ main {
                             height: 4rem;
                         }
 
-                        &:hover{
+                        &:hover {
                             @include transition-scale;
                         }
                     }
@@ -170,6 +173,7 @@ main {
         "title-theatre"
         "container-theatre"
         "container-film_footer";
+    padding-bottom: 40px;
 
     .titulo-my_prjc {
         grid-area: titulo-prjc;
@@ -180,11 +184,6 @@ main {
         @include flex-row-center;
         gap: 10%;
         padding-top: 3%;
-
-        img {
-            width: 31.2rem;
-            height: 18rem;
-        }
     }
 
     .film-title {
@@ -243,13 +242,69 @@ main {
 
         div {
             padding-top: 3%;
-            padding-left: 10%;
-            padding-right: 10%;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
 
-            img {
-                width: 20rem;
-                height: 12rem;
-            }
+.main-gallery {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    grid-template-areas:
+        "titulo-gll"
+        "container1"
+        "container2"
+        "container3";
+    padding-bottom: 40px;
+
+    .titulo-gll {
+        grid-area: titulo-gll;
+    }
+
+    img {
+        transition: 1s;
+
+        &:hover {
+            transform: scale(1.03);
+            filter: none;
+        }
+    }
+
+    .container1-gallery {
+        @include container-gallery;
+        grid-area: container1;
+
+        img {
+            width: 16rem;
+            height: 22rem;
+            object-fit: cover;
+        }
+    }
+
+    .containder2-gallery {
+        @include container-gallery;
+        grid-area: container2;
+
+        iframe {
+            @include size-contentGallery;
+        }
+    }
+
+    .container3-gallery {
+        @include container-gallery;
+        grid-area: container3;
+
+        img {
+            width: 16rem;
+            height: 22rem;
+            object-fit: cover;
+        }
+
+        iframe {
+            @include size-contentGallery;
         }
     }
 }
@@ -260,6 +315,7 @@ main {
     flex-direction: row;
     justify-content: space-around;
     gap: 20%;
+    padding-bottom: 10px;
 
     .columna-ctc {
         padding-top: 3%;
